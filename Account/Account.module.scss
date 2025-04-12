@@ -1,0 +1,166 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    // background-image: url("https://res.cloudinary.com/lewisshop/image/upload/v1743512910/toeic/answers/1743512902665-BackgroundImg.png.png");
+    padding: 0;
+    margin: 120px;
+  
+    .title {
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 24px;
+      color: var(--black);
+    }
+  
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .left-part {
+      width: 540px;
+      margin-right: 40px;
+      text-align: left;
+  
+      img {
+        width: 300px;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  
+    .right-part {
+      min-width: 600px;
+      margin-left: 40px;
+      color: var(--white);
+    }
+  
+    .form {
+      background-color: #d9d9d9;
+      width: 40vw;
+      border-radius: 25px;
+      padding: 40px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+        
+      :global {
+        .react-datepicker-wrapper,
+        .react-datepicker__input-container,
+        .react-datepicker__input-container input {
+          width:99%;
+        }
+  
+        .react-datepicker__input-container input {
+          padding: 10px;
+          background-color: var(--white);
+          border: 1px solid var(--white);
+          border-radius: 12px;
+          outline: none;
+          color: var(--black);
+          transition: border 0.2s;
+  
+          &:hover,
+          &:focus {
+            border-color: #aaa;
+          }
+  
+          &:disabled {
+            background-color: #eee;
+            color: #555;
+            cursor: not-allowed;
+          }
+        }
+      }
+      
+      .box {
+        display: flex;
+        flex-direction: column;
+
+        .label {
+          font-weight: 550;
+          text-transform: uppercase;
+          font-size: 14px;
+          margin-bottom: 6px;
+          color: var(--black);
+        }
+  
+        .input {
+          padding: 10px;
+          background-color: var(--white);
+          border: 1px solid var(--white);
+          border-radius: 12px;
+          outline: none;
+          color: var(--black);
+          transition: border 0.2s;
+  
+          &:hover,
+          &:focus {
+            border-color: #aaa;
+          }
+  
+          &:disabled {
+            background-color: #eee;
+            color: #555;
+            cursor: not-allowed;
+          }
+        }
+
+      }
+    
+      .box:last-child {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        .submit-button {
+          background-color: var(--yellow);
+          color: var(--dark);
+          font-weight: bold;
+          width: 200px;
+          border: none;
+          border-radius: 8px; // thêm nếu muốn bo góc
+          padding: 10px 16px;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: all 0.3s ease;        
+          
+          &:hover {
+            background-color: var(--white);
+            color: var(--black);
+          }
+        }
+      }
+      
+      .avatar, .preview-avatar {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;        
+          object-fit: cover;         
+          border: 2px solid #ccc;   
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);     
+
+        }
+      .preview-avatar {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 8px;
+      }
+
+      .avatar-container
+      {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+      }
+      
+  }
+  
+}

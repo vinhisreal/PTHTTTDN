@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://res.cloudinary.com/lewisshop/image/upload/v1743512910/toeic/answers/1743512902665-BackgroundImg.png.png");
+  padding: 0;
+  margin: 0;
+
+  .title {
+    text-transform: uppercase;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right-part {
+    min-width: 600px;
+    margin-left: 40px;
+    color: var(--white);
+
+    label {
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    .input {
+      margin-top: 4px;
+      width: 100%;
+      padding: 10px;
+      background-color: var(--white);
+      border: 1px solid var(--white);
+      border-radius: 12px;
+      outline: none;
+      color: var(--black);
+      box-sizing: border-box;
+    }
+
+    .input:hover,
+    .input:focus {
+      border-color: var(--white);
+    }
+
+    .input-wrapper {
+      position: relative;
+      width: 100%;
+
+      .input {
+        padding-right: 40px;
+      }
+
+      .toggle-password {
+        position: absolute;
+        top: 7%;
+        right: 12px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        cursor: pointer;
+        color: #999;
+
+        &:hover {
+          color: var(--yellow);
+        }
+      }
+    }
+  }
+
+  .left-part {
+    width: 540px;
+    margin-right: 40px;
+    text-align: left;
+
+    img {
+      width: 300px;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
