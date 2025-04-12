@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="text-align:center;">
+  {% if current_user.is_authenticated %}
+    <h1>Hello {{ current_user.username }}!</h1>
+    <img src="{{ current_user.avatar_url }}" alt="Avatar" style="width:100px; border-radius:50%; margin:10px;">
+    <p><strong>Email:</strong> {{current_user.email}}</p>
+    <p><strong>Location:</strong> {{ current_user.location}}</p>
+    <p><strong>Bio:</strong> {{ current_user.bio or "No bio available" }}</p>
+    <p><strong>Public Repositories:</strong> {{ current_user.public_repos }}</p>
+    <br/><br/>
+    <a href="{{url_for('logout')}}" class="btn btn-danger">Logout</a>
+  {% else %}
+    <a href="{{url_for('login')}}" class="btn btn-primary">
+      <i class="fa-brands fa-github"></i>
+      <span>Login with GitHub</span>
+    </a>
+  {% endif %}
+</div>
+{% endblock content %}
